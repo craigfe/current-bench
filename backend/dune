@@ -1,0 +1,11 @@
+(rule
+ (targets irmin_datastore-help.txt.gen)
+ (action
+  (with-stdout-to
+   %{targets}
+   (run irmin_datastore --help=plain))))
+
+(rule
+ (alias runtest)
+ (action
+  (diff irmin_datastore-help.txt irmin_datastore-help.txt.gen)))

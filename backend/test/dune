@@ -1,0 +1,3 @@
+(test
+ (name main)
+ (libraries alcotest irmin_datastore logs logs.fmt))

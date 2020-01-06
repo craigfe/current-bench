@@ -1,0 +1,17 @@
+(lang dune 2.0)
+(name irmin_datastore)
+(implicit_transitive_deps false)
+
+(generate_opam_files true)
+(source (github CraigFe/current_bench))
+(maintainers "Craig Ferguson <me@craigfe.io>")
+(authors "Craig Ferguson <me@craigfe.io>")
+
+(package
+ (name irmin_datastore)
+ (synopsis "Irmin database for benchmarking data exposed via a GraphQL interface")
+ (description "\
+Irmin database for benchmarking data exposed via a GraphQL interface
+")
+ (documentation https://CraigFe.github.io/current_bench/)
+ (depends alcotest fmt logs))

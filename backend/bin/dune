@@ -1,0 +1,8 @@
+(executable
+ (name main)
+ (libraries cmdliner fmt fmt.cli fmt.tty irmin_datastore logs logs.cli logs.fmt))
+
+(install
+ (section bin)
+ (files
+  (main.exe as irmin_datastore)))
