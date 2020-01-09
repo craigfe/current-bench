@@ -1,1 +1,1 @@
-val main : unit -> string
+val main : unit -> unit Lwt.t

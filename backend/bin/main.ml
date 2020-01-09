@@ -1,4 +1,4 @@
-let main () = Irmin_datastore.main () |> print_endline
+let main () = Irmin_datastore.main () |> Lwt_main.run
 
 open Cmdliner
 
@@ -11,7 +11,9 @@ let setup_log =
   Term.(const init $ Fmt_cli.style_renderer () $ Logs_cli.level ())
 
 let term =
-  let doc = "Irmin database for benchmarking data exposed via a GraphQL interface" in
+  let doc =
+    "Irmin database for benchmarking data exposed via a GraphQL interface"
+  in
   let exits = Term.default_exits in
   let man = [] in
   Term.(const main $ setup_log, info "irmin_datastore" ~doc ~exits ~man)

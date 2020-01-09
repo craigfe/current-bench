@@ -13,8 +13,21 @@ bug-reports: "https://github.com/CraigFe/current_bench/issues"
 depends: [
   "dune" {>= "2.0"}
   "alcotest"
+  "cohttp-lwt"
+  "cohttp-lwt-unix"
+  "conduit-lwt-unix"
   "fmt"
+  "graphql-lwt"
+  "irmin"
+  "irmin-git"
+  "irmin-graphql"
+  "irmin-mem"
+  "irmin-unix"
+  "jsonm"
   "logs"
+  "lwt"
+  "uuidm"
+  "yojson"
 ]
 build: [
   ["dune" "subst"] {pinned}
@@ -31,3 +44,8 @@ build: [
   ]
 ]
 dev-repo: "git+https://github.com/CraigFe/current_bench.git"
+
+pin-depends: [
+  [ "ppx_irmin.dev" "git+https://github.com/CraigFe/ppx_irmin" ]
+]
+

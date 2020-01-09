@@ -1,0 +1,5 @@
+
+pin-depends: [
+  [ "ppx_irmin.dev" "git+https://github.com/CraigFe/ppx_irmin" ]
+]
+

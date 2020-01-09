@@ -14,4 +14,20 @@
 Irmin database for benchmarking data exposed via a GraphQL interface
 ")
  (documentation https://CraigFe.github.io/current_bench/)
- (depends alcotest fmt logs))
+ (depends
+  alcotest
+  cohttp-lwt
+  cohttp-lwt-unix
+  conduit-lwt-unix
+  fmt
+  graphql-lwt
+  irmin
+  irmin-git
+  irmin-graphql
+  irmin-mem
+  irmin-unix
+  jsonm
+  logs
+  lwt
+  uuidm
+  yojson))

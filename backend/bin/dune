@@ -1,6 +1,7 @@
 (executable
  (name main)
- (libraries cmdliner fmt fmt.cli fmt.tty irmin_datastore logs logs.cli logs.fmt))
+ (libraries cmdliner fmt fmt.cli fmt.tty irmin_datastore logs logs.cli
+   logs.fmt lwt lwt.unix))
 
 (install
  (section bin)
