@@ -16,6 +16,8 @@ RUN yarn global add react-scripts@3.4.1
 # add app
 COPY . ./
 
+EXPOSE 3000
+
 # start app
 CMD ["yarn", "start"]
 
